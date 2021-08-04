@@ -1,8 +1,5 @@
 # CleanArchitecture.WebApi
 
-
-# CleanArchitecture.AngularWebApi
-
 * ASP.NET Core 5
 * [Entity Framework Core 5](https://docs.microsoft.com/en-us/ef/core/)
 * [MediatR](https://github.com/jbogard/MediatR)
