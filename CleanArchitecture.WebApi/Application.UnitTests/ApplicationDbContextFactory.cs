@@ -28,13 +28,11 @@ namespace CleanArchitecture.Application.UnitTests.Common
             dateTimeMock.Setup(m => m.Now)
                 .Returns(new DateTime(3001, 1, 1));
 
-            var currentUserServiceMock = new Mock<ICurrentUserService>();
-            currentUserServiceMock.Setup(m => m.UserId)
-                .Returns("00000000-0000-0000-0000-000000000000");
+
 
             var context = new ApplicationDbContext(
-                options, operationalStoreOptions,
-                currentUserServiceMock.Object, dateTimeMock.Object);
+                options, operationalStoreOptions
+                , dateTimeMock.Object);
 
             context.Database.EnsureCreated();
 
